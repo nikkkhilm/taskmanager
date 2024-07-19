@@ -5,7 +5,7 @@ const cors=require('cors');
 const auth=require('./routes/auth');//auth is an instance of the routes created 
 const list=require('./routes/list');
 
-c//onst path = require('path');//this is for running frontend on backend server only for deploying
+//const path = require('path');//this is for running frontend on backend server only for deploying
 
 app.use(express.json());//this is used as we are sending and recieving json data to parse it
 
