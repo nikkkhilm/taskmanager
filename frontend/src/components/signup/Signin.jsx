@@ -24,7 +24,7 @@ const Signin = () => {
     e.preventDefault();
     // console.log({ inputs });
     await axios
-      .post(`${window.location.origin}/api/v1/login`, inputs)
+      .post(`https://taskmanager-y5qh.onrender.com/api/v1/login`, inputs)
       .then((res) => {
         //  toast(res.data.message);
         if (res.data.message === "Signin Successful") {

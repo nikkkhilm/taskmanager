@@ -23,7 +23,7 @@ const Signup = () => {
     e.preventDefault();
     // console.log({ inputs });
     await axios
-      .post(`${window.location.origin}/api/v1/register`, inputs)
+      .post(`https://taskmanager-y5qh.onrender.com/api/v1/register`, inputs)
       .then((res) => {
         toast(res.data.message);
         if (res.data.message === "SignUp Successful") {

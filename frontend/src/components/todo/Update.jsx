@@ -23,7 +23,10 @@ const Update = ({ display, update }) => {
 
   const submit = async () => {
     await axios
-      .put(`${window.location.origin}/api/v2/updateTask/${update._id}`, inputs)
+      .put(
+        `https://taskmanager-y5qh.onrender.com/api/v2/updateTask/${update._id}`,
+        inputs
+      )
       .then((res) => {
         toast.success(`${res.data.message}`);
         display("none");

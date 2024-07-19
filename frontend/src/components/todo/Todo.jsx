@@ -26,7 +26,7 @@ const Todo = () => {
     } else {
       if (id) {
         await axios
-          .post(`${window.location.origin}/api/v2/addTask`, {
+          .post(`https://taskmanager-y5qh.onrender.com/api/v2/addTask`, {
             title: inputs.title,
             body: inputs.body,
             id: id,
@@ -62,9 +62,12 @@ const Todo = () => {
   const del = async (cardid) => {
     if (id) {
       await axios
-        .delete(`${window.location.origin}/api/v2/deleteTask/${cardid}`, {
-          data: { id: id },
-        })
+        .delete(
+          `https://taskmanager-y5qh.onrender.com/api/v2/deleteTask/${cardid}`,
+          {
+            data: { id: id },
+          }
+        )
         .then((res) => {
           toast.success(res.data.message);
         });
@@ -83,7 +86,7 @@ const Todo = () => {
     if (id) {
       const fetch = async () => {
         await axios
-          .get(`${window.location.origin}/api/v2/getTasks/${id}`)
+          .get(`https://taskmanager-y5qh.onrender.com/api/v2/getTasks/${id}`)
           .then((res) => {
             setArray(res.data.list);
           });
